@@ -1,0 +1,350 @@
+body {
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, ul, figure{
+  margin: 0;
+  padding: 0;
+}
+h6, h3{
+	color: black;
+}
+ul,figure{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+}
+
+ul li{
+  width: 100%;
+  position: relative;
+}
+
+
+ul li figcaption{
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: rgba(0, 0, 0, .6);
+  text-align: center;
+  padding: 15px;
+  font: 20px/30px verdana;
+  color:white;
+}
+
+.imagen{
+  width: 250px;
+}
+
+ul li figure:hover figcaption{
+  display:block;
+}
+
+.pelicula p{
+  text-align: end,center;
+  text-rendering: optimizeLegibility!important;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .45px;
+  margin-top: 215px;
+}
+
+/*------------contenedor titulo y controles------------------*/
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+	margin-top: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.peliculas-recomendadas .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/*----------------------------------------*/
+.contenedor-secundario{
+	width: 90%;
+	margin: auto;
+}
+.contenedor-secundario .contenedor-titulos{
+	color: #141414;
+	font-size: 30px;
+	text-align: left;
+	text-transform: uppercase!important;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+section{
+	min-height: 100px;
+}
+
+section.dark {
+	background:  #141414;
+	padding-bottom: 40px;
+	position: relative;
+  }
+/*-----------------Container  y card-----------------------*/
+  .contenedor-secundario .contenedor-card{
+	width: 100%;
+	max-width: 1200px;
+	height: 440px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
+	align-items: center;
+  }
+
+  .contenedor-secundario .contenedor-card .card{
+	width: 320px;
+	height: 565px;
+	border-radius: 8px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	margin: 20px;
+	text-align: center;
+	transition: all 0.25s;
+  }
+
+
+  .contenedor-secundario .contenedor-card .card:hover{
+	transform: translateY(-15px);
+	box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .contenedor-secundario .contenedor-card .card img{
+	width: 320px;
+	height: 400px;
+	padding: 12px;
+  }
+
+  .contenedor-secundario .contenedor-card .card h4{
+	font-weight: 500;
+	color: black;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	margin-left: 10px;
+  }
+
+  .contenedor-secundario .contenedor-card .card p{
+	font-weight: 500;
+	color: black;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 2px;
+	margin-left: 10px;
+}
+
+.contenedor-secundario .contenedor-card .sombra{
+	border-radius: 2px;
+    height: auto;
+    font-size: .6575rem;
+    font-weight: 500;
+    padding: 0.3125rem 0.625rem;
+    background-color: #eaeaea;
+    color: #000;
+    letter-spacing: .17px;	
+	font-size: 8px;
+	box-sizing: inherit;
+	display:flex;
+	margin-right: auto;
+}
+/*----------------contenedor tercero------------------------*/
+.contenedor-tercero .contenedor-card{
+	width: 100%;
+	max-width: 100%;
+	height: 480px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
+	align-items: center;
+  }
+
+.contenedor-tercero .contenedor-card .card{
+	width: 230px;
+	height: 480px;
+	border-radius: 8px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	margin: 20px;
+	text-align: center;
+	transition: all 0.25s;
+  }
+
+  
+  .contenedor-tercero .contenedor-card .card img{
+	width: 230px;
+	height: 370px;
+	padding: 12px;
+  }
+
+  .contenedor-tercero .contenedor-card .card:hover{
+	transform: translateY(-15px);
+	box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .contenedor-tercero .contenedor-card .card h4{
+	font-weight: 500;
+	color: black;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	margin-left: 10px;
+  }
+
+  .contenedor-tercero .contenedor-card .card p{
+	font-weight: 500;
+	color: black;
+	font-size: 11px;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 2px;
+	margin-left: 10px;
+}
+
+.contenedor-tercero .contenedor-card .sombra{
+	border-radius: 2px;
+    height: auto;
+    font-size: .6575rem;
+    font-weight: 500;
+    padding: 0.3125rem 0.625rem;
+    background-color: #eaeaea;
+    color: #000;
+    letter-spacing: .17px;	
+	font-size: 8px;
+	box-sizing: inherit;
+	display:flex;
+	margin-right: auto;
+}
+
+.contenedor-tercero .contenedor-titulos{
+	color: #141414;
+	font-size: 30px;
+	text-align: left;
+	text-transform: uppercase!important;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.contenedor-tercero{
+	width: 90%;
+	margin: auto;
+}
+  
+/*----------------------------------------*/
+.foo, .foo:link, .foo:visited, .foo:active{
+	color: #fff;
+	text-decoration: none;
+}
